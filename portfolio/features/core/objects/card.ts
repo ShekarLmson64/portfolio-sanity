@@ -1,5 +1,6 @@
 import {IoApps, IoCard as Icon, IoSettings} from 'react-icons/io5'
 import {Content, SchemaInputProps} from '../../../schemas/types'
+import { Rule } from 'sanity'
 
 export class Card extends Content {
   name = 'card'
@@ -62,7 +63,7 @@ export class Card extends Content {
             list: [...(variants?.card ?? [])],
           },
           group: 'main',
-          validation: (rule) => rule.required(),
+          validation: (rule: Rule) => rule.required(),
         },
         {
           name: 'largeVariant',
@@ -72,7 +73,7 @@ export class Card extends Content {
             list: [...(variants?.card ?? [])],
           },
           group: 'main',
-          validation: (rule) => rule.required(),
+          validation: (rule: Rule) => rule.required(),
         },
 
         {
