@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemas as types} from './schemas'
+import {media} from 'sanity-plugin-media'
 
 export default defineConfig([
   {
@@ -10,7 +11,7 @@ export default defineConfig([
     projectId: 'rzdcmrnx',
     dataset: 'dev',
     basePath: '/dev',
-    plugins: [structureTool(), visionTool()],
+    plugins: [structureTool(), visionTool(), media()],
     schema: {
       types: types,
     },
@@ -21,7 +22,7 @@ export default defineConfig([
     projectId: 'rzdcmrnx',
     dataset: 'production',
     basePath: '/production',
-    plugins: [structureTool(), visionTool()],
+    plugins: [structureTool(), visionTool(), media()],
     schema: {
       types: types,
     },
