@@ -76,13 +76,6 @@ export class Card extends Content {
           validation: (rule: Rule) => rule.required(),
         },
         {
-          name: 'projects',
-          title: 'Projects',
-          type: 'reference',
-          to: [{type: 'project'}],
-          group: 'main',
-        },
-        {
           name: 'logo',
           title: 'Logo',
           type: 'image',

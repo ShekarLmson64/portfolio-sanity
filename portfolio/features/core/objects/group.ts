@@ -104,6 +104,22 @@ export class Group extends Content {
           group: 'main',
         },
         {
+          name: 'projects',
+          title: 'Projects',
+          type: 'array',
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {
+                  type: 'project',
+                },
+              ],
+            },
+          ],
+          group: 'main',
+        },
+        {
           title: 'Tags',
           name: 'tags',
           type: 'array',
