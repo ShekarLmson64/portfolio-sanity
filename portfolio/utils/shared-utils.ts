@@ -2,9 +2,9 @@ import {createClient, ClientConfig} from '@sanity/client'
 
 export function getSanityClient(dataset: 'production' | 'dev') {
   const config: ClientConfig = {
-    projectId: 'wmp0seay',
+    projectId: 'rzdcmrnx',
     dataset,
-    apiVersion: 'v2021-10-21',
+    apiVersion: 'v2022-03-07',
     useCdn: false,
   }
 
