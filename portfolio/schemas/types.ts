@@ -33,6 +33,7 @@ class SchemaItemsProperties {
 class VariantSchemaProperties {
   group: VariantDefinition[] = []
   card: VariantDefinition[] = []
+  divider: VariantDefinition[] = []
   dialog: VariantDefinition[] = []
 }
 

@@ -1,4 +1,4 @@
-import {FeatureSchemaDefinition} from '../../../schemas/types'
+import {FeatureSchemaDefinition} from '../../schemas/types'
 
 export const homePage: FeatureSchemaDefinition = {
   variants: {
@@ -16,8 +16,20 @@ export const homePage: FeatureSchemaDefinition = {
         value: 'brandCarouselItem',
       },
       {
-        title: 'Product Card',
-        value: 'productCard',
+        title: 'Project Card',
+        value: 'projectCard',
+      },
+      {
+        title: 'Intro Card',
+        value: 'introCard',
+      },
+      {
+        title: 'Image Card',
+        value: 'imageCard',
+      },
+      {
+        title: 'List Card',
+        value: 'listCard',
       },
       {
         title: 'Grey Background Item',
@@ -38,12 +50,34 @@ export const homePage: FeatureSchemaDefinition = {
         value: 'brandImageCarousel',
       },
       {
-        title: 'Product Group',
-        value: 'productGroup',
+        title: 'Project Group',
+        value: 'projectGroup',
+      },
+      {
+        title: 'Intro Group',
+        value: 'IntroGroup',
+      },
+      {
+        title: 'Group with Image',
+        value: 'groupWithImage',
+      },
+      {
+        title: 'Group with tags',
+        value: 'tagsGroup',
+      },
+      {
+        title: 'Group with List',
+        value: 'listGroup',
       },
       {
         title: 'Grey Background Group',
         value: 'greyBackgroundGroup',
+      },
+    ],
+    divider: [
+      {
+        title: 'Default',
+        value: 'default',
       },
     ],
   },

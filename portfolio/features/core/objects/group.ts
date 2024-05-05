@@ -9,7 +9,7 @@ export const groupPreview = {
     subtitle: 'subtitle',
     hidden: 'isHidden',
   },
-  prepare({title, items, subtitle, hidden}) {
+  prepare({title, items, subtitle, hidden}: any) {
     const count = items?.length || 0
     const countText = count === 1 ? '1 item' : `${count} items`
     const hiddenIndicator = hidden ? '🚫 ' : ''
@@ -38,6 +38,33 @@ export class Group extends Content {
           group: 'configuration',
         },
         {
+          title: 'Is Title Center?',
+          name: 'isCenter',
+          type: 'boolean',
+        },
+        {
+          title: 'Is Full Screen?',
+          name: 'isFull',
+          type: 'boolean',
+        },
+        {
+          name: 'padding',
+          title: 'Padding',
+          type: 'object',
+          fields: [
+            {
+              name: 'mobile',
+              title: 'Mobile',
+              type: 'string',
+            },
+            {
+              name: 'desktop',
+              title: 'Desktop',
+              type: 'string',
+            },
+          ],
+        },
+        {
           name: 'title',
           title: 'Title',
           type: 'string',
@@ -46,6 +73,12 @@ export class Group extends Content {
         {
           name: 'subtitle',
           title: 'Subtitle',
+          type: 'string',
+          group: 'main',
+        },
+        {
+          name: 'description',
+          title: 'Description',
           type: 'string',
           group: 'main',
         },
@@ -71,11 +104,17 @@ export class Group extends Content {
           group: 'main',
         },
         {
+          title: 'Tags',
+          name: 'tags',
+          type: 'array',
+          of: [{type: 'string'}],
+        },
+        {
           name: 'variant',
           title: 'Variant',
           type: 'string',
           options: {
-            list: variants.group,
+            list: variants?.group,
           },
           group: 'main',
         },
@@ -84,7 +123,7 @@ export class Group extends Content {
           title: 'Large Variant',
           type: 'string',
           options: {
-            list: variants.group,
+            list: variants?.group,
           },
           group: 'main',
         },
@@ -98,7 +137,7 @@ export class Group extends Content {
           name: 'items',
           title: 'Items',
           type: 'array',
-          of: items.pageItems,
+          of: items?.pageItems,
           group: 'main',
         },
       ],

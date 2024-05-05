@@ -1,6 +1,6 @@
 import {core} from '../features/core'
-import {pim} from '../features/pim'
+import {pdm} from '../features/pdm'
 import {bootstrap} from './bootstrap'
 import {homePage} from '../features/homepage'
 
-export const schemas = bootstrap([core, pim, homePage])
+export const schemas = bootstrap([core, pdm, homePage])

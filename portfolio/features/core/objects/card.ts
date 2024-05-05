@@ -1,6 +1,6 @@
 import {IoApps, IoCard as Icon, IoSettings} from 'react-icons/io5'
 import {Content, SchemaInputProps} from '../../../schemas/types'
-import { Rule } from 'sanity'
+import {Rule} from 'sanity'
 
 export class Card extends Content {
   name = 'card'
@@ -75,7 +75,13 @@ export class Card extends Content {
           group: 'main',
           validation: (rule: Rule) => rule.required(),
         },
-
+        {
+          name: 'projects',
+          title: 'Projects',
+          type: 'reference',
+          to: [{type: 'project'}],
+          group: 'main',
+        },
         {
           name: 'logo',
           title: 'Logo',
